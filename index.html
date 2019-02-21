@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Ljjjj</title>
+  <link rel="stylesheet" href="css\metricsgraphics.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="js\libs\suncalc.js"></script>
+  <script src="js\libs\luxon.min.js"></script>
+  <script src="js\libs\metricsgraphics.min.js"></script>
+  <script src="js\app.js" defer></script>
+</head>
+
+<body>
+
+  <div id='searchBoxContainer'>
+    <form action="javascript:createGraphic()">
+      Latitude:<br>
+      <input id="lat" type="range" name="lat" min="-90" max="90" onchange="javascript:displayLatLon();createGraphic()">
+      <br>
+      Longitude:<br>
+      <input id="lon" type="range" name="lon" min="-180" max="180" onchange="javascript:displayLatLon();createGraphic()">
+    </form>
+  </div>
+
+  <p id="latLon">Lat:   Lon:   </p>
+  <p id="times">Times</p>
+
+  <div id="metric-graph"></div>
+
+</body>
+</html>
